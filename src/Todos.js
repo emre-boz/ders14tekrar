@@ -1,6 +1,6 @@
 import { memo } from "react";
 
-const Todos = ({ todos }) => {
+const Todos = ({ todos,addTodo }) => {
   console.log("child render");
   return (
     <>
@@ -8,7 +8,7 @@ const Todos = ({ todos }) => {
       {todos.map((todo, index) => {
         return <p key={index}>{todo}</p>;
       })}
-      <button>Add Todo</button>
+      <button onClick={addTodo}>Add Todo</button>
     </>
   );
 };
