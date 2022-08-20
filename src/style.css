@@ -1,0 +1,37 @@
+header,section, footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+section .urun-liste{
+    display: grid;
+    gap:2rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+section .urun-liste .card{
+    border: 1px solid gray;
+    padding: 1rem;
+}
+
+.temaButonlar{
+    position:fixed;
+    top: 1rem;
+    right: 1rem;
+}
+
+.siyah{
+    background-color: black;
+    color:yellow;
+    
+}
+
+.kirmizi{
+    background-color: red;
+    color:white;
+}
+
+.mavi{
+    background-color: blue;
+    color:black;
+}
