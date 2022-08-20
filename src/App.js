@@ -1,41 +1,16 @@
-import React from "react";
-import Todos from "./Todos";
+import React, { useState } from "react";
+import C1 from './C1';
 
-const cokZamanAlanFonksiyon = (num) => {
-  console.log("Hesaplama yapılıyor...");
-  for (let i = 0; i < 1000000000; i++) {
-    num += 1;
-  }
-  return num;
-};
+
+
 
 function App() {
-  const [sayac, sayacGuncelle] = React.useState(0);
-  const [todos, setTodos] = React.useState([]);
-  const hesaplamaSonucu = React.useMemo(()=>cokZamanAlanFonksiyon(sayac),[todos]);
-
-  const increment = () => {
-    sayacGuncelle((oncekiSayac) => oncekiSayac + 1);
-  };
-
-  // const kitaplar={};
-  // const isim="Hasan";
-  const addTodo = React.useCallback(() => {
-    let saniye= new Date().getSeconds();
-    setTodos((oncekiDizi) => [...oncekiDizi, "Yapılacak iş"+saniye]);
-  }, []);
-
+const [isim,isimGuncelle]=useState("Ahmet Yılmaz");
 
 
   return (
     <>
-    <p>Hesaplama Sonucu: {hesaplamaSonucu}</p>
-      <Todos todos={todos}  addTodo={addTodo}/> 
-      <hr />
-      <div>
-        sayac: {sayac}
-        <button onClick={increment}>+</button>
-      </div>
+      <C1 v1={isim}/>
     </>
   );
 }
