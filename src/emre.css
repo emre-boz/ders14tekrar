@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: blueviolet;
+  border: 3px solid black;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  
+  
+}
+
+.container > div {
+  
+  -webkit-box-shadow: -11px 8px 17px -5px rgba(0, 0, 0, 0.4);
+  box-shadow: -11px 8px 17px -5px rgba(0, 0, 0, 0.4);
+}
+
+.container > div img {
+    width: 100%;
+  }
+
+  .kerim {
+    width: 1200px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+  }
+
+  .mahmut{
+    width: 75px;
+    height: 25px;
+    background-color: green;
+  }
